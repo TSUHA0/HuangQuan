@@ -1,17 +1,11 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="欢迎来到桌游权皇在线版！"/>
+  <div id="app">
+    <router-view/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+export default {}
 </script>
 
 <style>
