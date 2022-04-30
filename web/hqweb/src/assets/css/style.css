@@ -32,14 +32,14 @@
     display: inline-block;
 }
 
-.play-ground-behind-character{
+.play-ground-behind-character {
     background-color: burlywood;
     width: 4.5vw;
     height: 15vh;
     float: left;
 }
 
-.play-ground-front-character{
+.play-ground-front-character {
     background-color: aliceblue;
     width: 4.5vw;
     height: 15vh;
@@ -70,7 +70,7 @@
 .hand-card {
     background-color: khaki;
     border-style: solid;
-    width: 8vw;
+    width: 6vw;
     height: 15vh;
     float: left;
 }

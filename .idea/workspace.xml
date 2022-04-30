@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="set up 写法">
-      <change afterPath="$PROJECT_DIR$/HuangQuan/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HuangQuan/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hqweb/src/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hqweb/src/components/About.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hqweb/src/components/GameGround.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hqweb/src/components/HandCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hqweb/src/components/MyGround.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hqweb/src/components/PlayerGround.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hqweb/src/plugin/http.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hqweb/src/plugin/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hqweb/src/router/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/hqweb/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/hqweb/src/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/hqweb/src/components/GameGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/hqweb/src/components/GameGround.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/hqweb/src/components/HandCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/hqweb/src/components/HandCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/hqweb/src/components/MyGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/hqweb/src/components/MyGround.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +39,7 @@
   <component name="GOROOT" url="file://C:/Program Files/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
@@ -64,28 +58,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/CodeFile/HuangQuan/web/hqweb/src/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
-    "ts.external.directory.path": "D:\\Code\\JB\\PyCharm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CodeFile/HuangQuan/web/hqweb/src/components&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Confirmation&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Code\\JB\\PyCharm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CodeFile\HuangQuan\web\hqweb\src\components" />
@@ -132,6 +126,7 @@
       <workItem from="1651254303252" duration="2366000" />
       <workItem from="1651290598298" duration="5243000" />
       <workItem from="1651310352480" duration="4439000" />
+      <workItem from="1651326066781" duration="1216000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1651138175487</created>

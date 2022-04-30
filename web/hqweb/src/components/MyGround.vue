@@ -9,9 +9,9 @@
     <div class="my-ground-information-gray">
       黑密函
     </div>
-    <HandCard v-for="(item,i) in handcardArr" :key="i" :cardId="item.cardId"
-              :num="handcardArr.length" :bottom="item.cardId == selectCardId ? bt6 : bt0"
-              :isSelect="item.isSelect" @selectback="getSelectback">
+    <HandCard v-for="(item,i) in handcardArr" :key="i" :cardId="item"
+              :num="handcardArr.length" :bottom="item == selectCardId ? bt6 : bt0"
+              @selectback="getSelectback">
     </HandCard>
 
   </div>
@@ -43,18 +43,14 @@ export default {
   },
   methods: {
     getSelectback(cardId) {
-      console.log(this.selectCardId);
       for (var i = 0; i < this.handcardArr.length; i++) {
         var item = this.handcardArr[i];
-        if (item.cardId == cardId) {
-          if (this.selectCardId === -1) {
-            this.updateSelectCardId(item.cardId);
-          } else {
+        if (item == cardId) {
+          if (this.selectCardId == cardId) {
             this.updateSelectCardId(-1);
+          } else {
+            this.updateSelectCardId(item);
           }
-          item.isSelect = !item.isSelect;
-        } else {
-          item.isSelect = false;
         }
       }
     },

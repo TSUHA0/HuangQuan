@@ -43,33 +43,20 @@ export default {
   },
   data() {
     return {
-      handcardArr: [
-        {
-          cardId: 1,
-          isSelect: false
-        },
-        {
-          cardId: 2,
-          isSelect: false
-        },
-        {
-          cardId: 3,
-          isSelect: false
-        }
-      ],
+      handcardArr: [1, 2, 3],
     };
   },
   methods: {
-    playCard() {
-      let item = this.handcardArr;
-      for (var i = 0; i < item.length; i++) {
-        if (item[i].isSelect) {
-          item.splice(i, 1);
-          this.selectCardId = -1;
-          //do play card
-        }
-      }
-    },
+    // playCard() {
+    //   let item = this.handcardArr;
+    //   for (var i = 0; i < item.length; i++) {
+    //     if (item[i].isSelect) {
+    //       item.splice(i, 1);
+    //       this.selectCardId = -1;
+    //       //do play card
+    //     }
+    //   }
+    // },
   },
 };
 </script>
