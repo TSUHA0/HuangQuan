@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from "@/router/router";
+import './assets/css/style.css'
 
 // 5. 创建并挂载根实例
 const app = createApp(App)
