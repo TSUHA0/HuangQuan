@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="定义路由">
+    <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="set up 写法">
+      <change afterPath="$PROJECT_DIR$/HuangQuan/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HuangQuan/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/hqweb/src/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/hqweb/src/components/About.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/hqweb/src/components/GameGround.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/hqweb/src/components/HandCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/hqweb/src/components/MyGround.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/hqweb/src/components/PlayerGround.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/hqweb/src/plugin/http.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/hqweb/src/plugin/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/hqweb/src/router/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/hqweb/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/hqweb/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/hqweb/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/hqweb/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,34 +58,34 @@
   </component>
   <component name="ProjectId" id="28Q9ZOD9pWHW2rqAkQrsBNCwAq3" />
   <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CodeFile/HuangQuan/web/hqweb/src/components&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Code\\JB\\PyCharm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/CodeFile/HuangQuan/web/hqweb/src/components",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
+    "ts.external.directory.path": "D:\\Code\\JB\\PyCharm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CodeFile\HuangQuan\web\hqweb\src\components" />
@@ -122,7 +131,7 @@
       <workItem from="1651204378868" duration="22446000" />
       <workItem from="1651254303252" duration="2366000" />
       <workItem from="1651290598298" duration="5243000" />
-      <workItem from="1651310352480" duration="456000" />
+      <workItem from="1651310352480" duration="4439000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1651138175487</created>
@@ -145,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651221490807</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="set up 写法">
+      <created>1651310978600</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651310978600</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +182,8 @@
     <MESSAGE value="project init" />
     <MESSAGE value="初始化项目机构，解决django跨域问题" />
     <MESSAGE value="定义路由" />
-    <option name="LAST_COMMIT_MESSAGE" value="定义路由" />
+    <MESSAGE value="set up 写法" />
+    <option name="LAST_COMMIT_MESSAGE" value="set up 写法" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
