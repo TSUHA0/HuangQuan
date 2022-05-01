@@ -1,0 +1,100 @@
+
+.play-ground {
+    background-color: lightblue;
+    width: 9vw;
+    height: 20vh;
+}
+
+#play-ground-1 {
+    position: absolute;
+    left: 0vw;
+    bottom: 1vh;
+}
+
+#play-ground-2 {
+    position: absolute;
+    left: 45vw;
+    top: 0.2vh;
+    display: inline-block;
+}
+
+#play-ground-3 {
+    position: absolute;
+    top: 25vh;
+    left: 0.5vw;
+    display: inline-block;
+}
+
+#play-ground-4 {
+    position: absolute;
+    top: 25vh;
+    right: 0.5vw;
+    display: inline-block;
+}
+
+.play-ground-behind-character {
+    background-color: burlywood;
+    width: 4.5vw;
+    height: 15vh;
+    float: left;
+}
+
+.play-ground-front-character {
+    background-color: aliceblue;
+    width: 4.5vw;
+    height: 15vh;
+    float: left;
+}
+
+.play-ground-information-blue {
+    background-color: deepskyblue;
+    width: 3vw;
+    height: 5vh;
+    float: left;
+}
+
+.play-ground-information-red {
+    background-color: red;
+    width: 3vw;
+    height: 5vh;
+    float: left;
+}
+
+.play-ground-information-gray {
+    background-color: lightgray;
+    width: 3vw;
+    height: 5vh;
+    float: left;
+}
+
+.hand-card {
+    background-color: khaki;
+    border-style: solid;
+    width: 6vw;
+    height: 15vh;
+    float: left;
+}
+
+.my-ground-information-blue {
+    background-color: deepskyblue;
+    position: relative;
+    left: 0.3vw;
+    width: 6vw;
+    height: 5vh;
+}
+
+.my-ground-information-red {
+    background-color: red;
+    position: relative;
+    left: 0.3vw;
+    width: 6vw;
+    height: 5vh;
+}
+
+.my-ground-information-gray {
+    background-color: lightgray;
+    position: relative;
+    left: 0.3vw;
+    width: 6vw;
+    height: 5vh;
+}
