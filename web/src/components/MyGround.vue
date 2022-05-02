@@ -9,8 +9,8 @@
     <div class="my-ground-information-gray">
       黑密函
     </div>
-    <HandCard v-for="(item,i) in handcardArr" :key="i" :cardId="item"
-              :num="handcardArr.length" :bottom="item == selectCardId ? bt6 : bt0"
+    <HandCard v-for="(item,i) in handCard" :key="i" :cardId="item" :idx="i"
+              :num="handCard.length" :bottom="item == selectCardId ? bt6 : bt0"
               @selectback="getSelectback">
     </HandCard>
 
@@ -19,21 +19,23 @@
 
 <script>
 import HandCard from "@/components/HandCard";
-import {inject} from "vue";
+import {inject, toRefs} from "vue";
 
 export default {
   name: "MyGround",
   components: {HandCard},
   setup() {
+    const players = inject("players");
+    const pos = inject("pos");
+    let myStatus = toRefs(players.arr[pos.value - 1]);
+
     const updateSelectCardId = inject("updateSelectCardId");
     const selectCardId = inject("selectCardId");
     return {
       selectCardId,
-      updateSelectCardId
+      updateSelectCardId,
+      handCard: myStatus.hand_card
     };
-  },
-  props: {
-    handcardArr: Array,
   },
   data() {
     return {
@@ -43,8 +45,9 @@ export default {
   },
   methods: {
     getSelectback(cardId) {
-      for (var i = 0; i < this.handcardArr.length; i++) {
-        var item = this.handcardArr[i];
+      for (var i = 0; i < this.handCard.length; i++) {
+        console.log(this.handCard);
+        var item = this.handCard[i];
         if (item == cardId) {
           if (this.selectCardId == cardId) {
             this.updateSelectCardId(-1);

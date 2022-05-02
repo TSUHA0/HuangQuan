@@ -1,6 +1,6 @@
 <template>
   <div class="hand-card" :style="cardStyle + bottom" @click="sendSelectIdxback">
-    手牌
+    手牌{{ cardId }}
   </div>
 </template>
 
@@ -18,6 +18,7 @@ export default {
     };
   },
   props: {
+    idx: Number,
     cardId: Number,
     num: Number,
     bottom: String
@@ -26,7 +27,7 @@ export default {
   data() {
     return {
       // 牌过多时，将牌进行重叠处理，后期待完善
-      cardStyle: "position: absolute; left:" + (basePos + (this.cardId) * (this.num > 3 ? 4 : 6)) + "vw;",
+      cardStyle: "position: absolute; left:" + (basePos + (this.idx + 1) * (this.num > 10 ? 4 : 6)) + "vw;",
       // cardBottom: "bottom: 0;",
     };
   },

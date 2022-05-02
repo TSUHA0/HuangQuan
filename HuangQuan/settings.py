@@ -179,3 +179,7 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+CARD_NUM = 100
+FRONT_ROLE_NUM = 40
+BEHIND_ROLE_NUM = 10

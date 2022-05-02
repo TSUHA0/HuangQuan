@@ -31,13 +31,11 @@ export default {
     let ses = window.sessionStorage;
 
     function storeTestMsg() {
-      console.log(inMsg);
       ses.setItem(
           "testmsg", inMsg.value
       );
     }
 
-    console.log(ses);
     return {
       msgs,
       inMsg,

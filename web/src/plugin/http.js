@@ -1,16 +1,10 @@
-import {store} from "@/plugin/store";
-
 let Url = "http://127.0.0.1:8000/api/";
 let Wss = "ws://127.0.0.1:8000/wss/multiplayer/";
 
 import axios from "axios";
 
-const apiReq = axios.create(
-    {
-        baseURL: Url,
-        withCredentials: true,
-    }
-);
+const apiReq = axios.create({
+    baseURL: Url, withCredentials: true,
+});
 
-store.state.wss = new WebSocket(Wss);
 export {apiReq, Wss};

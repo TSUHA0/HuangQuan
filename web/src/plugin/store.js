@@ -1,4 +1,5 @@
 import {reactive} from "vue";
+import {Wss} from "@/plugin/http";
 
 const store = {
     state: reactive(
@@ -11,5 +12,7 @@ const store = {
         this.state.handCardSeletIdx = idx;
     }
 };
+
+store.state.wss = new WebSocket(Wss);
 
 export {store};

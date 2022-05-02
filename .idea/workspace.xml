@@ -4,34 +4,19 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="重构">
-      <change afterPath="$PROJECT_DIR$/game/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/models/player/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/models/player/player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/urls/settings/index.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/views/settings/login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/views/settings/loginfo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/views/settings/logout.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/views/settings/register.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/components/GameRoom.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/components/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc3819e9-98d2-4d88-afcd-63a66021f129.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc3819e9-98d2-4d88-afcd-63a66021f129.xml" afterDir="false" />
+    <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="完成登陆、注册和游戏房间的基本功能">
+      <change afterPath="$PROJECT_DIR$/game/consumers/multiplayer/cardlist.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HuangQuan/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HuangQuan/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/consumers/multiplayer/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/consumers/multiplayer/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/urls/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/urls/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/urls/loginmenu/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/urls/loginmenu/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/About.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/GameGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/GameGround.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/GameRoom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/GameRoom.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/HandCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/HandCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/MyGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/MyGround.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/plugin/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/plugin/http.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/plugin/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/plugin/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/web/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,29 +72,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CodeFile/HuangQuan/web/src/components&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Code\\JB\\PyCharm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindow运行.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/CodeFile/HuangQuan/web/src/components",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "ts.external.directory.path": "D:\\Code\\JB\\PyCharm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CodeFile\HuangQuan\web\src\components" />
@@ -126,7 +112,7 @@
       <recent name="D:\CodeFile\HuangQuan\HuangQuan\HuangQuan" />
     </key>
   </component>
-  <component name="RunManager" selected="Django 服务器.django">
+  <component name="RunManager" selected="npm.npm">
     <configuration name="django" type="Python.DjangoServer" factoryName="Django server">
       <module name="HuangQuan" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,7 +170,7 @@
       <workItem from="1651373358470" duration="8566000" />
       <workItem from="1651383375870" duration="11449000" />
       <workItem from="1651402960313" duration="12493000" />
-      <workItem from="1651457291104" duration="20122000" />
+      <workItem from="1651457291104" duration="43937000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1651138175487</created>
@@ -235,7 +221,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651390825798</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="完成登陆、注册和游戏房间的基本功能">
+      <created>1651482736320</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1651482736321</updated>
+    </task>
+    <task id="LOCAL-00009" summary="完成登陆、注册和游戏房间的基本功能">
+      <created>1651482753725</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1651482753725</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +259,8 @@
     <MESSAGE value="set up 写法" />
     <MESSAGE value="重构card isSelect结构" />
     <MESSAGE value="重构" />
-    <option name="LAST_COMMIT_MESSAGE" value="重构" />
+    <MESSAGE value="完成登陆、注册和游戏房间的基本功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成登陆、注册和游戏房间的基本功能" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
