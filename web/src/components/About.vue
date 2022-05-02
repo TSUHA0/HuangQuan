@@ -1,8 +1,9 @@
 <template>
   <div>
     <input v-model="inMsg"/>
+    <span>{{ inMsg }}</span>
     <br>
-    <!--    <button @click="connWss">连接</button>-->
+    <button @click="storeTestMsg">保存</button>
     <button @click="sendMsg">发送</button>
     <ul>
       <li v-for="(msg, i) in msgs" :key="i">
@@ -14,22 +15,34 @@
 
 <script>
 import {Wss} from "@/plugin/http";
+import {ref} from "vue";
 
 export default {
   name: "About",
   setup() {
     let msgs = ["first"];
-    let inMsg = "";
+    let inMsg = ref("");
     let ws = new WebSocket(Wss + "wss/multiplayer/");
 
     function sendMsg() {
       ws.send(inMsg);
     }
 
+    let ses = window.sessionStorage;
+
+    function storeTestMsg() {
+      console.log(inMsg);
+      ses.setItem(
+          "testmsg", inMsg.value
+      );
+    }
+
+    console.log(ses);
     return {
       msgs,
       inMsg,
       sendMsg,
+      storeTestMsg
     };
   }
 };

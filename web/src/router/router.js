@@ -1,12 +1,32 @@
 import {createRouter, createWebHashHistory} from "vue-router";
-import Home from "../components/GameGround";
-import login from "../components/Login";
-import About from "@/components/About";
+
 
 const routes = [
-    {path: "/", component: Home},
-    {path: "/login", component: login},
-    {path: "/test", component: About},
+    {
+        path: "/",
+        name: "game",
+        component: () => import("../components/GameGround")
+    },
+    {
+        path: "/login",
+        name: "login",
+        component: () => import("../components/Login")
+    },
+    {
+        path: "/register",
+        name: "register",
+        component: () => import("../components/Register")
+    },
+    {
+        path: "/gameroom",
+        name: "gameroom",
+        component: () => import("../components/GameRoom")
+    },
+    {
+        path: "/test",
+        name: "test",
+        component: () => import("@/components/About")
+    },
 ];
 
 const router = createRouter({

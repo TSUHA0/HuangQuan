@@ -1,14 +1,16 @@
 <template>
-  <div id="login">
+  <div>
     <span>账号：</span>
     <input v-model="username"/>
     <br>
     <span>密码：</span>
     <input type="password" v-model="password"/>
+    <br>
+    <span>再次输入密码：</span>
+    <input type="password" v-model="password_confirm"/>
     <div style="padding-top:20px;">
-      <span style="padding-right:3vh;" @click="login"><button>登陆</button></span>
-      <span style="padding-right:3vh;" @click="$router.push('/register')"><button>注册</button></span>
-      <span><button @click="getLoginStatus">状态</button></span>
+      <span style="padding-right:3vh;" @click="register"><button>注册</button></span>
+      <span @click="this.$router.push('/login')"><button>返回登陆界面</button></span>
     </div>
   </div>
 
@@ -19,7 +21,7 @@ import {apiReq} from "@/plugin/http";
 import qs from "qs";
 
 export default {
-  name: "login",
+  name: "register",
   props: {
     msg: String
   },
@@ -27,19 +29,21 @@ export default {
     return {
       username: "",
       password: "",
-      ServMsg: "",
+      password_confirm: "",
     };
   },
   methods: {
-    login() {
+    register() {
       let data = qs.stringify({
         username: this.username,
         password: this.password,
+        password_confirm: this.password_confirm
       });
-      apiReq.post("login/", data).then((res) => {
+      apiReq.post("register/", data).then((res) => {
+            console.log(res);
             if (res.data.result == "success") {
-              window.sessionStorage.setItem("username", this.username);
-              this.$router.push("/gameroom");
+              alert("注册成功，即将返回主页");
+              this.$router.push("/login");
             } else {
               alert(res.data.result);
             }
@@ -58,12 +62,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#login {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

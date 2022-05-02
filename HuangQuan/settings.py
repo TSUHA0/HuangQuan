@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'channels',
-    'game.apps.GameConfig'
+    'game.apps.GameConfig',
 ]
 
 MIDDLEWARE = [
@@ -52,8 +52,12 @@ MIDDLEWARE = [
 ]
 
 # 跨域增加忽略
+
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_HEADERS = ('*')
+CSRF_TRUSTED_ORIGINS = ['http://192.168.163.151:8080', 'https://localhost']
+
 # CORS_ALLOWED_ORIGINS = [
 #     "https://example.com",
 #     "https://sub.example.com",
@@ -115,6 +119,17 @@ DATABASES = {
     }
 }
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379/1',
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+    },
+}
+USER_AGENTS_CACHE = 'default'
+
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -156,7 +171,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ASGI_APPLICATION = "HuangQuan.asgi.application"
 
-ASGI_APPLICATION = 'acapp.asgi.application'
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",

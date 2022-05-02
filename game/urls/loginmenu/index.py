@@ -7,6 +7,7 @@ from django.http import JsonResponse
 from django.urls import path
 import threading
 
+
 class MyModel():
     _counter = 0
     _counter_lock = threading.Lock()
@@ -23,6 +24,7 @@ class MyModel():
     def get_cnt(self):
         return self._counter
 
+
 def index(request):
     MyModel().some_action()
     response = {'msg': 'serv msg:' + str(MyModel().get_cnt())}
@@ -30,5 +32,5 @@ def index(request):
 
 
 urlpatterns = [
-    path("login", index, name="index")
+    path("test", index, name="index")
 ]
