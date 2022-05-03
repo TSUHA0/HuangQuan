@@ -37,6 +37,18 @@ class MultiPlayer(AsyncWebsocketConsumer):
         cache.set(self.get_card_list_pos_key(), (card_pos + 1) % CARD_NUM)
         return cache.get(self.get_card_list_key())[card_pos]
 
+    async def draw_card_with_num(self, num):
+        card_list = []
+        for i in range(num):
+            card_list.append(self.draw_card())
+        await self.channel_layer.group_send(
+            self.room_id, {
+                'type': "group_event_send",
+                'event': "draw_card",
+                'username': self.username,
+                'card_list': card_list,
+            })
+
     async def connect(self):
         print('connect')
         await self.accept()
@@ -50,7 +62,7 @@ class MultiPlayer(AsyncWebsocketConsumer):
                 await self.channel_layer.group_send(
                     self.room_id,
                     {
-                        'type': "group_player",
+                        'type': "group_event_send",
                         'event': "delete_player",
                         'username': self.username
                     })
@@ -81,13 +93,13 @@ class MultiPlayer(AsyncWebsocketConsumer):
         await self.channel_layer.group_send(
             self.room_id,
             {
-                'type': "group_player",
+                'type': "group_event_send",
                 'event': "create_player",
                 'username': data['username'],
             }
         )
 
-    async def group_player(self, data):
+    async def group_event_send(self, data):
         await self.send(text_data=json.dumps(data))
 
     async def join_room(self, data):
@@ -114,7 +126,7 @@ class MultiPlayer(AsyncWebsocketConsumer):
         if type == "all":
             await self.channel_layer.group_send(
                 self.room_id, {
-                    'type': "group_player",
+                    'type': "group_event_send",
                     'event': "game_status",
                     'data': game_status,
                 })
@@ -170,9 +182,11 @@ class MultiPlayer(AsyncWebsocketConsumer):
     async def receive(self, text_data):
         data = json.loads(text_data)
         event = data['event']
-        if event == "joinroom":
+        if event == "join_room":
             self.username = str(data['username'])
             self.room_id = str(data['roomid'])
             await self.join_room(data)
-        elif event == "gamestart":
+        elif event == "game_start":
             await self.game_init()
+        elif event == "draw_card":
+            await self.draw_card_with_num(data['cardnum'])

@@ -4,7 +4,7 @@ import {Wss} from "@/plugin/http";
 const store = {
     state: reactive(
         {
-            wss: undefined,
+            wss: new WebSocket(Wss),
             handCardSeletIdx: -1
         }
     ),
@@ -12,7 +12,5 @@ const store = {
         this.state.handCardSeletIdx = idx;
     }
 };
-
-store.state.wss = new WebSocket(Wss);
 
 export {store};

@@ -14,12 +14,9 @@ export default {
 
     return {
       cardUsedId
-    }
+    };
   },
   name: "UsedCard",
-  data() {
-  },
-  methods: {},
 };
 </script>
 

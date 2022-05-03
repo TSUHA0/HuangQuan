@@ -13,8 +13,7 @@
       </ul>
     </div>
   </div>
-  <GameGround v-else :players="players"></GameGround>
-  <button @click="changeHand">改变手牌</button>
+  <GameGround v-else></GameGround>
 
 </template>
 
@@ -37,7 +36,7 @@ export default {
     let roomId = 0;
     let pos = ref(0);
     let playerNum = ref(0);
-    let actionLog = reactive({arr: ["进入房间"]});
+    let actionLog = ref(["进入房间"]);
     let players = reactive({arr: []});
     let selectCardId = ref(-1);
     let cardUsedId = ref(-1);
@@ -53,33 +52,56 @@ export default {
       router.push("/login");
     }
 
+    function delete_player(data) {
+      for (let i = 0; i < playerList.value.length; i++)
+        if (playerList.value[i] === data.username) playerList.value.splice(i, 1);
+    }
+
+    function recover_game(data) {
+      let players = data.players;
+      for (let i = 0; i < players.length; ++i) {
+        if (players[i].username === username) continue;
+        playerList.value.push(players[i].username);
+      }
+    }
+
+    function game_start(data) {
+      roomIsShow.value = false;
+      players.arr = data.data;
+      playerNum.value = data.data.length;
+      for (let i = 0; i < data.data.length; i++)
+        if (data.data[i].username === username)
+          pos.value = data.data[i].pos;
+    }
+
+    function draw_card(data) {
+      let card_list = data.card_list;
+      console.log("抽卡表", card_list);
+      actionLog.value.push(data.username + "抽了" + card_list.length + "张牌");
+      console.log("actionLog.arr", actionLog.value);
+
+      for (let i = 0; i < players.arr.length; i++) {
+        if (players.arr[i].username === data.username) {
+          for (let j = 0; j < card_list.length; ++j) players.arr[i].hand_card.push(card_list[j]);
+        }
+      }
+    }
+
     function wssOnMsg(e) {
       let data = JSON.parse(e.data);
       let event = data.event;
       console.log(data);
-      if (data.username === username) return false;
-      if (event === "create_player") {  //添加用户进入房间
-        playerList.value.push(data.username);
-      } else if (event === "recover_game") { //用户恢复房间状态
-        let players = data.players;
-        for (let i = 0; i < players.length; ++i) {
-          if (players[i].username === username) continue;
-          playerList.value.push(players[i].username);
-        }
-      } else if (event === "delete_player") { //用户退出房间
-        for (let i = 0; i < playerList.value.length; i++)
-          if (playerList.value[i] === data.username) playerList.value.splice(i, 1);
-      } else if (event === "game_status") {  //对局开始
-        roomIsShow.value = false;
-        players.arr = data.data;
-        playerNum.value = data.data.length;
-        for (let i = 0; i < data.data.length; i++) {
-          if (data.data[i].username === username) {
-            pos.value = data.data[i].pos;
-          }
-        }
 
-      }
+      if (event === "draw_card") draw_card(data);  //玩家抽牌
+
+      // 以下为需要忽略username为自身的event
+      if (data.username === username) return false;
+      if (event === "create_player") playerList.value.push(data.username);  //添加用户进入房间
+      else if (event === "recover_game") recover_game(data); //用户恢复房间状态
+      else if (event === "delete_player") delete_player(data); //用户退出房间
+      else if (event === "game_status") game_start(data);  //对局开始
+
+
       return true;
     }
 
@@ -101,7 +123,7 @@ export default {
     async joinRoom() {
       store.state.wss.send(JSON.stringify(
           {
-            "event": "joinroom",
+            "event": "join_room",
             "roomid": this.roomId,
             "username": this.username,
           }
@@ -111,7 +133,7 @@ export default {
     gameStart() {
       store.state.wss.send(JSON.stringify(
           {
-            "event": "gamestart",
+            "event": "game_start",
           }
       ));
     },

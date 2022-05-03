@@ -8,6 +8,7 @@
       </div>
       <div class="play-ground-front-character">
       </div>
+      <div>手牌数:{{ hand_card.length }}</div>
       <div class="play-ground-information-blue">
         {{ blue.length }}
       </div>

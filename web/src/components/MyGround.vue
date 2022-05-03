@@ -7,7 +7,7 @@
     <div class="my-ground-information-gray">
     </div>
     <HandCard v-for="(item,i) in handCard" :key="i" :cardId="item" :idx="i"
-              :num="handCard.length" :bottom="item == selectCardId ? bt6 : bt0"
+              :bottom="item == selectCardId ? bt6 : bt0"
               @selectback="getSelectback">
     </HandCard>
 

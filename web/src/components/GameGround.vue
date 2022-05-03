@@ -1,8 +1,9 @@
 <template>
   <div>
-    <div>牌堆</div>
-    <button @click="drawCard">抽一张牌</button>
-    <button>抽两张牌</button>
+    <div> 牌堆</div>
+    <button @click="drawCard(1)">抽 1 张牌</button>
+    <br>
+    <button style="margin-top: 1vh" @click="drawCard(2)">抽 2 张牌</button>
     <PlayerGround id="play-ground-2" :loc="loc[1]"></PlayerGround>
     <PlayerGround id="play-ground-3" :loc="loc[2]"></PlayerGround>
     <PlayerGround id="play-ground-4" :loc="loc[3]"></PlayerGround>
@@ -34,6 +35,7 @@ import MyGround from "@/components/MyGround";
 import UsedCard from "@/components/UsedCard";
 import ActionLog from "@/components/ActionLog";
 import {inject, toRefs} from "vue";
+import {store} from "@/plugin/store";
 
 export default {
   name: "GameGround",
@@ -74,6 +76,14 @@ export default {
           //do play card
         }
       }
+    },
+    drawCard(num) {
+      store.state.wss.send(JSON.stringify(
+          {
+            "event": "draw_card",
+            "cardnum": num,
+          }
+      ));
     }
   },
 };

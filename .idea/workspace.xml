@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="完成初始化自己的手牌">
-      <change afterPath="$PROJECT_DIR$/web/src/components/ActionLog.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/components/UsedCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/components/按钮功能梳理.md" afterDir="false" />
+    <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="添加出牌记录区域，添加角色选中功能，添加同步数据到各个角色区域功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/consumers/multiplayer/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/consumers/multiplayer/index.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/ActionLog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/ActionLog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/GameGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/GameGround.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/GameRoom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/GameRoom.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/HandCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/HandCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/MyGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/MyGround.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/PlayerGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/PlayerGround.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/UsedCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/UsedCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/plugin/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/plugin/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.standard": "",
     "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "ts.external.directory.path": "D:\\Code\\JB\\PyCharm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -170,7 +170,7 @@
       <workItem from="1651383375870" duration="11449000" />
       <workItem from="1651402960313" duration="12493000" />
       <workItem from="1651457291104" duration="50767000" />
-      <workItem from="1651548745353" duration="12057000" />
+      <workItem from="1651548745353" duration="20185000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1651138175487</created>
@@ -242,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651509896661</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="添加出牌记录区域，添加角色选中功能，添加同步数据到各个角色区域功能">
+      <created>1651572533260</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1651572533260</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +275,8 @@
     <MESSAGE value="重构" />
     <MESSAGE value="完成登陆、注册和游戏房间的基本功能" />
     <MESSAGE value="完成初始化自己的手牌" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成初始化自己的手牌" />
+    <MESSAGE value="添加出牌记录区域，添加角色选中功能，添加同步数据到各个角色区域功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加出牌记录区域，添加角色选中功能，添加同步数据到各个角色区域功能" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

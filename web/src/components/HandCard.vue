@@ -1,37 +1,41 @@
 <template>
-  <div class="hand-card" :style="cardStyle + bottom" @click="sendSelectIdxback">
+  <div class="hand-card" :style=" 'position: absolute; left:' +
+      (this.basePos + (this.idx + 1) * (this.handCard.length > 13 ? (75 / this.handCard.length) : 6))
+      + 'vw;' + this.bottom "
+       @click="sendSelectIdxback">
     手牌{{ cardId }}
   </div>
 </template>
 
 <script>
 
-let basePos = 4;
+import {inject, toRefs} from "vue";
+
+
 export default {
   setup(props, {emit}) {
+    let basePos = 4;
+    const players = inject("players");
+    const pos = inject("pos");
+    let myStatus = toRefs(players.arr[pos.value - 1]);
+    const handCard = myStatus.hand_card;
+
     function sendSelectIdxback() {
       emit("selectback", props.cardId);
     }
 
     return {
-      sendSelectIdxback
+      basePos,
+      sendSelectIdxback,
+      handCard
     };
   },
   props: {
     idx: Number,
     cardId: Number,
-    num: Number,
     bottom: String
   },
   name: "HandCard",
-  data() {
-    return {
-      // 牌过多时，将牌进行重叠处理，后期待完善
-      cardStyle: "position: absolute; left:" + (basePos + (this.idx + 1) * (this.num > 10 ? 4 : 6)) + "vw;",
-      // cardBottom: "bottom: 0;",
-    };
-  },
-  methods: {},
 };
 </script>
 
