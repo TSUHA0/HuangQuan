@@ -1,11 +1,16 @@
 <template>
   <div>
-    <PlayerGround id="play-ground-2"></PlayerGround>
-    <PlayerGround id="play-ground-3"></PlayerGround>
-    <PlayerGround id="play-ground-4"></PlayerGround>
-    <div style="position: absolute; left: 50vw;bottom: 55vh;width: 10vw"
-    >{{ players }}
-    </div>
+    <div>牌堆</div>
+    <button @click="drawCard">抽一张牌</button>
+    <button>抽两张牌</button>
+    <PlayerGround id="play-ground-2" :loc="loc[1]"></PlayerGround>
+    <PlayerGround id="play-ground-3" :loc="loc[2]"></PlayerGround>
+    <PlayerGround id="play-ground-4" :loc="loc[3]"></PlayerGround>
+    <PlayerGround id="play-ground-5" :loc="loc[4]"></PlayerGround>
+    <PlayerGround id="play-ground-6" :loc="loc[5]"></PlayerGround>
+
+    <UsedCard id="play-ground-used-card"></UsedCard>
+
     <button v-show="selectCardId > -1"
             style="position: absolute; left: 20vw;bottom: 25vh;width: 10vw"
             @click="playCard">
@@ -18,49 +23,58 @@
       弃牌
     </button>
     <MyGround :selectCardId="selectCardId" id="play-ground-1"></MyGround>
-
   </div>
+  <ActionLog></ActionLog>
 
 </template>
 
 <script>
 import PlayerGround from "@/components/PlayerGround";
 import MyGround from "@/components/MyGround";
-import {ref, provide, inject} from "vue";
+import UsedCard from "@/components/UsedCard";
+import ActionLog from "@/components/ActionLog";
+import {inject, toRefs} from "vue";
 
 export default {
   name: "GameGround",
-  components: {MyGround, PlayerGround},
+  components: {MyGround, PlayerGround, UsedCard, ActionLog},
   setup() {
     const players = inject("players");
     const playerNum = inject("playerNum");
     const pos = inject("pos");
+    const selectCardId = inject("selectCardId");
+    const cardUsedId = inject("cardUsedId");
+    let myStatus = toRefs(players.arr[pos.value - 1]);
+    const handCard = myStatus.hand_card;
 
-    let selectCardId = ref(-1);
-    const updateSelectCardId = (newId) => {
-      selectCardId.value = newId;
-    };
-    provide("updateSelectCardId", updateSelectCardId);
-    provide("selectCardId", selectCardId);
+    console.log("playerNum", playerNum.value);
+    let loc = [];
+    for (let i = pos.value + 1, cnt = 0; cnt < 10; ++i, ++cnt) {
+      i = ((i - 1) % playerNum.value) + 1;
+      loc.push(i);
+    }
+    console.log(loc);
     return {
-      selectCardId,
-      updateSelectCardId,
       players,
       playerNum,
-      pos
+      pos,
+      selectCardId,
+      handCard,
+      cardUsedId,
+      loc
     };
   },
   methods: {
-    // playCard() {
-    //   let item = this.handcardArr;
-    //   for (var i = 0; i < item.length; i++) {
-    //     if (item[i].isSelect) {
-    //       item.splice(i, 1);
-    //       this.selectCardId = -1;
-    //       //do play card
-    //     }
-    //   }
-    // },
+    playCard() {
+      for (var i = 0; i < this.handCard.length; i++) {
+        if (this.selectCardId === this.handCard[i]) {
+          this.handCard.splice(i, 1);
+          this.cardUsedId = this.selectCardId;
+          this.selectCardId = -1;
+          //do play card
+        }
+      }
+    }
   },
 };
 </script>

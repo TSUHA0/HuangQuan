@@ -1,18 +1,23 @@
 <template>
   <div>
     <div class="my-ground-information-blue">
-      王道密函
     </div>
     <div class="my-ground-information-red">
-      霸道密函
     </div>
     <div class="my-ground-information-gray">
-      黑密函
     </div>
     <HandCard v-for="(item,i) in handCard" :key="i" :cardId="item" :idx="i"
               :num="handCard.length" :bottom="item == selectCardId ? bt6 : bt0"
               @selectback="getSelectback">
     </HandCard>
+
+    <div class="my-ground-behind-character">
+      <img src="https://img.win3000.com/m00/06/ac/9e46cfd309a8aa2c7ef0b16ed50296be_c_345_458.jpg"
+           style="height: 100%;width: 100%">
+    </div>
+    <div class="my-ground-front-character">
+      傀儡
+    </div>
 
   </div>
 </template>
@@ -28,13 +33,14 @@ export default {
     const players = inject("players");
     const pos = inject("pos");
     let myStatus = toRefs(players.arr[pos.value - 1]);
+    const handCard = myStatus.hand_card;
 
     const updateSelectCardId = inject("updateSelectCardId");
     const selectCardId = inject("selectCardId");
     return {
       selectCardId,
       updateSelectCardId,
-      handCard: myStatus.hand_card
+      handCard
     };
   },
   data() {
@@ -46,7 +52,6 @@ export default {
   methods: {
     getSelectback(cardId) {
       for (var i = 0; i < this.handCard.length; i++) {
-        console.log(this.handCard);
         var item = this.handCard[i];
         if (item == cardId) {
           if (this.selectCardId == cardId) {

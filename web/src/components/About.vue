@@ -27,11 +27,9 @@ export default {
     function sendMsg() {
       ws.send(inMsg);
     }
-
-    let ses = window.sessionStorage;
-
+    
     function storeTestMsg() {
-      ses.setItem(
+      window.sessionStorage.setItem(
           "testmsg", inMsg.value
       );
     }

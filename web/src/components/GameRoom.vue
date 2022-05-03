@@ -1,4 +1,5 @@
 <template>
+  <button @click="blueChange">asd</button>
   <div id="gameroom" v-if=gameRoundisShow>
     <span>房间号：</span>
     <input v-model="roomId"/>
@@ -35,8 +36,16 @@ export default {
     let username = window.sessionStorage.getItem("username");
     let roomId = 0;
     let pos = ref(0);
-    let playerNum = 0;
+    let playerNum = ref(0);
+    let actionLog = reactive({arr: ["进入房间"]});
     let players = reactive({arr: []});
+    let selectCardId = ref(-1);
+    let cardUsedId = ref(-1);
+    let selectUsername = ref("");
+
+    const updateSelectCardId = (newId) => {
+      selectCardId.value = newId;
+    };
 
 
     if (username == null) {
@@ -63,7 +72,7 @@ export default {
       } else if (event === "game_status") {  //对局开始
         roomIsShow.value = false;
         players.arr = data.data;
-        playerNum = data.data.length;
+        playerNum.value = data.data.length;
         for (let i = 0; i < data.data.length; i++) {
           if (data.data[i].username === username) {
             pos.value = data.data[i].pos;
@@ -77,6 +86,12 @@ export default {
     provide("players", players);
     provide("pos", pos);
     provide("playerNum", playerNum);
+    provide("selectCardId", selectCardId);
+    provide("updateSelectCardId", updateSelectCardId);
+    provide("cardUsedId", cardUsedId);
+    provide("selectUsername", selectUsername);
+    provide("actionLog", actionLog);
+
     store.state.wss.onmessage = wssOnMsg;
     return {
       username, roomId, playerList, gameRoundisShow: roomIsShow, pos, players
@@ -104,6 +119,10 @@ export default {
       let myStatus = this.players.arr[this.pos - 1];
       myStatus.hand_card = [1, 2, 3, 4, 6];
       console.log("myStatus", myStatus);
+    },
+    blueChange() {
+      this.players.arr[1].blue.push(1);
+      console.log(this.players.arr[1].blue);
     }
 
   }
