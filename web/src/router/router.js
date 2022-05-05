@@ -11,8 +11,6 @@ const routes = [{
     path: "/", name: "gameroom", component: () => import("../components/GameRoom")
 }, {
     path: "/test", name: "test", component: () => import("@/components/About")
-}, {
-    path: "/float", name: "float", component: () => import("@/components/FloatWindow")
 },];
 
 const router = createRouter({

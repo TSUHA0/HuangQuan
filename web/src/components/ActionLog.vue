@@ -21,5 +21,7 @@ export default {
 </script>
 
 <style scoped>
-
+.action-log {
+  font-size: 2vh;
+}
 </style>

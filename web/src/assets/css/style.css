@@ -21,25 +21,25 @@
 
 #play-ground-2 {
     position: absolute;
-    top: 35vh;
-    right: 0.5vw;
-}
-
-#play-ground-3 {
-    position: absolute;
     top: 0.2vh;
     left: 60vw;
 }
 
-#play-ground-4 {
+#play-ground-3 {
     position: absolute;
     left: 45vw;
     top: 0.2vh;
 }
 
-#play-ground-5 {
+#play-ground-4 {
     position: absolute;
     left: 30vw;
+    top: 0.2vh;
+}
+
+#play-ground-5 {
+    position: absolute;
+    left: 15vw;
     top: 0.2vh;
 }
 
@@ -155,10 +155,8 @@
     z-index: 7;
     position: absolute;
     display: none;
-    /*bottom: 10vh;*/
-    /*left: 5vh;*/
-    width: 400px;
-    height: 130px;
+    width: 20vw;
+    height: 10vh;
     border-style: solid;
     transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1),
     top 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -171,7 +169,7 @@
     font-variant: normal;
     font-weight: normal;
     font-stretch: normal;
-    font-size: 14px;
+    font-size: 1vmax;
     font-family: "Microsoft YaHei";
     line-height: 21px;
     padding: 10px 10px;

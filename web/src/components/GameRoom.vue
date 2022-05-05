@@ -1,5 +1,5 @@
 <template>
-  <button @click="blueChange">asd</button>
+  <button @click="changeHand">asd</button>
   <div id="gameroom" v-if=gameRoundisShow>
     <span>房间号：</span>
     <input v-model="roomId"/>
@@ -40,6 +40,7 @@ export default {
     let players = reactive({arr: []});
     let selectCardId = ref(-1);
     let cardUsedId = ref(-1);
+    let cardUsedName = ref("");
     let selectUsername = ref("");
     let floatWindowContent = ref("");
 
@@ -115,6 +116,7 @@ export default {
     provide("selectUsername", selectUsername);
     provide("actionLog", actionLog);
     provide("floatWindowContent", floatWindowContent);
+    provide("cardUsedName", cardUsedName);
 
     store.state.wss.onmessage = wssOnMsg;
     return {

@@ -33,7 +33,7 @@ def init_behind_list():
 
 
 def init_card_list():
-    return get_random_list(1, 100, 100)
+    return get_random_list(1, 92, 92)
 
 
 def init_role_list(n):

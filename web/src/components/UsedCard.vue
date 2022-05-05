@@ -1,6 +1,6 @@
 <template>
   <div class="hand-card">
-    使用牌{{ cardUsedId }}
+    {{}}使用牌{{ cardUsedId }}
   </div>
 </template>
 
@@ -11,9 +11,11 @@ import {inject} from "vue";
 export default {
   setup() {
     const cardUsedId = inject("cardUsedId");
+    const cardUsedName = inject("cardUsedName");
 
     return {
-      cardUsedId
+      cardUsedId,
+      cardUsedName
     };
   },
   name: "UsedCard",

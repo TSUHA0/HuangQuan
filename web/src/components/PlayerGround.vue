@@ -54,5 +54,7 @@ export default {
 </script>
 
 <style scoped>
-
+.play-ground {
+  style: "font-size: 2vh"
+}
 </style>

@@ -1,12 +1,12 @@
 <template>
   <div>
     <div id="focus_toolTip" class="special_focus_toolTip">
-      <div style='font-size:12px;color: #fec443;font-weight: bold;font-family: MicrosoftYaHei;'>
+      <div style='color: #fec443;font-weight: bold;font-family: MicrosoftYaHei;'>
         {{ floatWindowContent }}
       </div>
     </div>
     <div class="hand-card" :style=" 'position: absolute; left:' +
-      (this.basePos + (this.idx + 1) * (this.handCard.length > 13 ? (75 / this.handCard.length) : 6))
+      (this.basePos + (this.idx + 1) * (this.handCard.length > 8 ? (75 / this.handCard.length) : 8))
       + 'vw;' + this.bottom "
          @click="sendSelectIdxback">
       <img :src="test" style="height: 100%;width: 100%"
@@ -19,13 +19,17 @@
 </template>
 
 <script>
-import {inject, toRefs} from "vue";
+import {inject, ref, toRefs} from "vue";
 import $ from "jquery";
+import g_secretCard from "@/plugin/secretcard";
 
 export default {
   name: "HandCard",
   setup(props, {emit}) {
-    let test = require("@/assets/test.png");
+    let cardSrc = ref(g_secretCard[props.cardId].imgtag);
+    let test = require("@/assets/images/card/" + cardSrc.value + ".png");
+    let cardContent = ref(g_secretCard[props.cardId].content);
+
     let basePos = 4;
     const players = inject("players");
     const pos = inject("pos");
@@ -44,7 +48,8 @@ export default {
       sendSelectIdxback,
       handCard,
       floatWindowContent,
-      t
+      t,
+      cardContent
     };
   },
   props: {
@@ -58,7 +63,7 @@ export default {
       this.t = setTimeout(function () {
         focusTooltip.css("display", "block");
       }, 1500);
-      this.floatWindowContent = "选中手牌" + this.cardId;
+      this.floatWindowContent = this.cardContent;
     },
     itemMouseout: function () {
       var focusTooltip = $("#focus_toolTip");
@@ -68,7 +73,13 @@ export default {
     itemMousemove: function (e) {
       let focusTooltip = $("#focus_toolTip");
       focusTooltip.css("bottom", parseInt(100 - e.clientY / window.innerHeight * 100) + "vh");
-      focusTooltip.css("left", parseInt(e.clientX / window.innerWidth * 100 + 2) + "vw");
+      let x = parseInt(e.clientX / window.innerWidth * 100 + 2);
+      if (x > 78) {
+        focusTooltip.css("left", "78vw");
+      } else {
+        focusTooltip.css("left", x + "vw");
+      }
+
     },
   }
 };
