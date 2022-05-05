@@ -46,7 +46,7 @@ export default {
   data() {
     return {
       bt0: "bottom:0vh;",
-      bt6: "bottom:6vh;"
+      bt6: "bottom:10vh;"
     };
   },
   methods: {

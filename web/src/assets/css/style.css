@@ -92,10 +92,10 @@
 }
 
 .hand-card {
-    background-color: khaki;
-    border-style: solid;
-    width: 6vw;
-    height: 15vh;
+    /*background-color: khaki;*/
+    /*border-style: solid;*/
+    width: 8vw;
+    height: 20vh;
     float: left;
 }
 
@@ -149,4 +149,30 @@
     height: 30vh;
     left: 75vw;
     top: 1vh;
+}
+
+.special_focus_toolTip {
+    z-index: 7;
+    position: absolute;
+    display: none;
+    /*bottom: 10vh;*/
+    /*left: 5vh;*/
+    width: 400px;
+    height: 130px;
+    border-style: solid;
+    transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+    top 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    background-color: rgba(50, 50, 50, 0.701961);
+    border-width: 0px;
+    border-color: #333333;
+    border-radius: 4px;
+    color: #ffffff;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    line-height: 21px;
+    padding: 10px 10px;
 }

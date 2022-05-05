@@ -1,37 +1,30 @@
 import {createRouter, createWebHashHistory} from "vue-router";
 
 
-const routes = [
-    {
-        path: "/",
-        name: "game",
-        component: () => import("../components/GameGround")
-    },
-    {
-        path: "/login",
-        name: "login",
-        component: () => import("../components/Login")
-    },
-    {
-        path: "/register",
-        name: "register",
-        component: () => import("../components/Register")
-    },
-    {
-        path: "/gameroom",
-        name: "gameroom",
-        component: () => import("../components/GameRoom")
-    },
-    {
-        path: "/test",
-        name: "test",
-        component: () => import("@/components/About")
-    },
-];
+const routes = [{
+    path: "/gameround", name: "game", component: () => import("../components/GameGround"),
+}, {
+    path: "/login", name: "login", component: () => import("../components/Login")
+}, {
+    path: "/register", name: "register", component: () => import("../components/Register")
+}, {
+    path: "/", name: "gameroom", component: () => import("../components/GameRoom")
+}, {
+    path: "/test", name: "test", component: () => import("@/components/About")
+}, {
+    path: "/float", name: "float", component: () => import("@/components/FloatWindow")
+},];
 
 const router = createRouter({
-    history: createWebHashHistory(),
-    routes, // `routes: routes` 的缩写
+    history: createWebHashHistory(), routes, // `routes: routes` 的缩写
+});
+
+router.beforeEach((to, from, next) => {
+    if (window.sessionStorage.getItem("username") || to.path === "/login") next();
+    else {
+        alert("请先登陆");
+        next("/login");
+    }
 });
 
 // router.beforeEach((to, from, next) => {

@@ -39,7 +39,7 @@ export default {
       apiReq.post("login/", data).then((res) => {
             if (res.data.result == "success") {
               window.sessionStorage.setItem("username", this.username);
-              this.$router.push("/gameroom");
+              this.$router.push("/");
             } else {
               alert(res.data.result);
             }

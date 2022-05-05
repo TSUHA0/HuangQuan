@@ -41,6 +41,7 @@ export default {
     let selectCardId = ref(-1);
     let cardUsedId = ref(-1);
     let selectUsername = ref("");
+    let floatWindowContent = ref("");
 
     const updateSelectCardId = (newId) => {
       selectCardId.value = newId;
@@ -113,6 +114,7 @@ export default {
     provide("cardUsedId", cardUsedId);
     provide("selectUsername", selectUsername);
     provide("actionLog", actionLog);
+    provide("floatWindowContent", floatWindowContent);
 
     store.state.wss.onmessage = wssOnMsg;
     return {
