@@ -6,6 +6,5 @@
 from django.urls import path, include
 
 urlpatterns = [
-    path("api/", include("game.urls.loginmenu.index")),
     path("api/", include("game.urls.settings.index")),
 ]

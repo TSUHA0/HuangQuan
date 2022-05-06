@@ -21,7 +21,6 @@
 import {store} from "@/plugin/store";
 import GameGround from "@/components/GameGround";
 import {provide, reactive, ref} from "vue";
-import {useRouter} from "vue-router";
 
 export default {
   name: "login",
@@ -29,29 +28,30 @@ export default {
     GameGround
   },
   setup() {
-    let roomIsShow = ref(true);
-    const router = useRouter();
-    let playerList = ref([""]);
-    let username = window.sessionStorage.getItem("username");
-    let roomId = 0;
-    let pos = ref(0);
-    let playerNum = ref(0);
-    let actionLog = ref(["进入房间"]);
-    let players = reactive({arr: []});
-    let selectCardId = ref(-1);
-    let cardUsedId = ref(-1);
-    let cardUsedName = ref("");
-    let selectUsername = ref("");
-    let floatWindowContent = ref("");
+    let roomIsShow = ref(true); //标记游戏是否开始
+    let playerList = ref([""]); // 玩家名称列表
+    let username = window.sessionStorage.getItem("username"); //本玩家名称
+    let roomId = 0; // 房间id
+    let pos = ref(0); // 标记位于几号位
+    let playerNum = ref(0); //玩家数量
+    let actionLog = ref(["进入房间"]); //出牌记录
+    let actionNum = 0; //出牌记录计数
+    let players = reactive({arr: []}); // 同步server传来的玩家对局信息
+    let selectCardId = ref(-1);  //选中卡牌的id
+    let selectUsername = ref(""); //选中玩家的名称
+    let cardUsedId = ref(0);  //出牌的id
+    let cardUsedOwner = ref(""); //出牌玩家的名称
+    let floatWindowContent = ref(""); //悬浮窗内容
+    let deliverCardOwner = ref("");
 
     const updateSelectCardId = (newId) => {
       selectCardId.value = newId;
     };
 
-
-    if (username == null) {
-      alert("请先登陆");
-      router.push("/login");
+    function updateActionLog(log) {
+      actionNum++;
+      if (actionLog.value.length >= 10) actionLog.value.splice(0, 1);
+      actionLog.value.push(actionNum + ": " + log);
     }
 
     function delete_player(data) {
@@ -79,7 +79,7 @@ export default {
     function draw_card(data) {
       let card_list = data.card_list;
       console.log("抽卡表", card_list);
-      actionLog.value.push(data.username + "抽了" + card_list.length + "张牌");
+      updateActionLog(data.username + "抽了" + card_list.length + "张牌");
       console.log("actionLog.arr", actionLog.value);
 
       for (let i = 0; i < players.arr.length; i++) {
@@ -116,7 +116,8 @@ export default {
     provide("selectUsername", selectUsername);
     provide("actionLog", actionLog);
     provide("floatWindowContent", floatWindowContent);
-    provide("cardUsedName", cardUsedName);
+    provide("cardUsedOwner", cardUsedOwner);
+    provide("deliverCardOwner", deliverCardOwner);
 
     store.state.wss.onmessage = wssOnMsg;
     return {

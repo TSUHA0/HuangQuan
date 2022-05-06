@@ -34,7 +34,7 @@ class MultiPlayer(AsyncWebsocketConsumer):
     def draw_card(self):
         card_pos = cache.get(self.get_card_list_pos_key())
         # 暂时不考虑洗牌
-        cache.set(self.get_card_list_pos_key(), (card_pos + 1) % CARD_NUM)
+        cache.set(self.get_card_list_pos_key(), (1 + int(card_pos)) % CARD_NUM)
         return cache.get(self.get_card_list_key())[card_pos]
 
     async def draw_card_with_num(self, num):
@@ -69,13 +69,16 @@ class MultiPlayer(AsyncWebsocketConsumer):
                 await self.channel_layer.group_discard(self.room_id, self.channel_name)
         cache.set(self.room_id, players, 7200)
 
-    async def recover_game(self, data):
+    async def recover_game_room(self, data):
         players = cache.get(self.room_id)
         data = {
             'event': "recover_game",
             'players': players,
         }
         await self.send(text_data=json.dumps(data))
+
+    async def recover_game_round(self):
+        await self.send_game_status("mono")
 
     async def create_player(self, data):
         players = cache.get(self.room_id)
@@ -111,7 +114,7 @@ class MultiPlayer(AsyncWebsocketConsumer):
         for player in cache.get(self.room_id):
             if player['username'] == data['username']:
                 not_need_rec = False
-                await self.recover_game(data)
+                await self.recover_game_room(data)
         # 如果玩家 >8 这里要处理一下
         # todo
         if not_need_rec:
@@ -131,10 +134,17 @@ class MultiPlayer(AsyncWebsocketConsumer):
                     'data': game_status,
                 })
         elif type == "mono":
-            await self.send(text_data=json.dumps(game_status))
+            await self.send(text_data=json.dumps({
+                'event': "game_status",
+                'data': game_status,
+            }))
 
     async def game_init(self):
         if cache.get(self.get_room_satus_key()):
+            players = cache.get(self.room_id)
+            for player in players:
+                if player['username'] == self.username:
+                    return await self.recover_game_round()
             return await self.send(text_data=json.dumps({
                 "status": "error",
                 "result": "对局正在进行，请选择重新连接游戏"

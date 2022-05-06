@@ -3,7 +3,7 @@ let g_secretCard = [
         name: "密函名称",
         color: "密函颜色",
         direct: "密函传递方向",
-        imgtag: "密函图片名称",
+        imgtag: "权皇",
         content: "密函功能描述"
     },
     {

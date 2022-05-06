@@ -1,24 +1,33 @@
 <template>
   <div>
     <div class="my-ground-information-blue">
+      {{ blue.length }}
     </div>
     <div class="my-ground-information-red">
+      {{ red.length }}
     </div>
     <div class="my-ground-information-gray">
+      {{ gray.length }}
     </div>
     <HandCard v-for="(item,i) in handCard" :key="i" :cardId="item" :idx="i"
-              :bottom="item == selectCardId ? bt6 : bt0"
+              :bottom="item === selectCardId ? bt6 : bt0"
               @selectback="getSelectback">
     </HandCard>
 
-    <div class="my-ground-behind-character">
-      <img src="https://img.win3000.com/m00/06/ac/9e46cfd309a8aa2c7ef0b16ed50296be_c_345_458.jpg"
+    <div :class="selectUsername === username ? 'my-ground-if-select' : '' ">
+    </div>
+    <div @click="selectUser" class="my-ground-behind-character">
+      <img src="@/assets/images/character/张良.png"
            style="height: 100%;width: 100%">
     </div>
-    <div class="my-ground-front-character">
-      傀儡
+    <div @click="selectUser" class="my-ground-front-character">
+      <img src="@/assets/images/character/刺客.png"
+           style="height: 100%;width: 100%">
     </div>
-
+    <div class="my-ground-deliver-card">
+      <img src="@/assets/images/card/权皇.png"
+           style="height: 100%;width: 100%">
+    </div>
   </div>
 </template>
 
@@ -32,6 +41,8 @@ export default {
   setup() {
     const players = inject("players");
     const pos = inject("pos");
+    const selectUsername = inject("selectUsername");
+
     let myStatus = toRefs(players.arr[pos.value - 1]);
     const handCard = myStatus.hand_card;
 
@@ -40,7 +51,9 @@ export default {
     return {
       selectCardId,
       updateSelectCardId,
-      handCard
+      handCard,
+      selectUsername,
+      ...myStatus
     };
   },
   data() {
@@ -62,6 +75,12 @@ export default {
         }
       }
     },
+    selectUser() {
+      if (this.selectUsername === this.username)
+        this.selectUsername = "";
+      else
+        this.selectUsername = this.username;
+    }
   },
 };
 </script>

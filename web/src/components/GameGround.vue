@@ -10,19 +10,26 @@
     <PlayerGround id="play-ground-5" :loc="loc[4]"></PlayerGround>
     <PlayerGround id="play-ground-6" :loc="loc[5]"></PlayerGround>
 
-    <UsedCard id="play-ground-used-card"></UsedCard>
+    <UsedCard v-if="cardUsedId !== 0" id="play-ground-used-card"></UsedCard>
 
     <button v-show="selectCardId > -1"
-            style="position: absolute; left: 20vw;bottom: 25vh;width: 10vw"
+            style="position: absolute; left: 20vw;bottom: 35vh;width: 7vw"
             @click="playCard">
       出牌
     </button>
 
     <button v-show="selectCardId > -1"
-            style="position: absolute; left: 40vw;bottom: 25vh;width: 10vw"
+            style="position: absolute; left: 40vw;bottom: 35vh;width: 7vw"
             @click="playCard">
       弃牌
     </button>
+
+    <button v-show="selectCardId > -1"
+            style="position: absolute; left: 30vw;bottom: 35vh;width: 7vw"
+            @click="playCard">
+      传递
+    </button>
+
     <MyGround :selectCardId="selectCardId" id="play-ground-1"></MyGround>
   </div>
   <ActionLog></ActionLog>
@@ -46,6 +53,7 @@ export default {
     const pos = inject("pos");
     const selectCardId = inject("selectCardId");
     const cardUsedId = inject("cardUsedId");
+    const cardUsedOwner = inject("cardUsedOwner");
     let myStatus = toRefs(players.arr[pos.value - 1]);
     const handCard = myStatus.hand_card;
 
@@ -63,7 +71,8 @@ export default {
       selectCardId,
       handCard,
       cardUsedId,
-      loc
+      loc,
+      cardUsedOwner
     };
   },
   methods: {
@@ -74,6 +83,7 @@ export default {
           this.cardUsedId = this.selectCardId;
           this.selectCardId = -1;
           //do play card
+          this.cardUsedOwner = window.sessionStorage.getItem("username");
         }
       }
     },

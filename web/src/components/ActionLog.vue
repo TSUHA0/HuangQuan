@@ -1,8 +1,8 @@
 <template>
   <div class="action-log">
-    <ol>
+    <ul style="list-style-type: none;">
       <li v-for="(item, i) in actionLog" :key="i">{{ item }}</li>
-    </ol>
+    </ul>
   </div>
 </template>
 

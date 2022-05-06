@@ -6,10 +6,10 @@
       </div>
     </div>
     <div class="hand-card" :style=" 'position: absolute; left:' +
-      (this.basePos + (this.idx + 1) * (this.handCard.length > 8 ? (75 / this.handCard.length) : 8))
+      (this.basePos + (this.idx) * (this.handCard.length > 8 ? (70 / this.handCard.length) : 8))
       + 'vw;' + this.bottom "
          @click="sendSelectIdxback">
-      <img :src="test" style="height: 100%;width: 100%"
+      <img :src="imgsrc" style="height: 100%;width: 100%"
            @mousemove="itemMousemove($event)"
            @mouseover="itemMouseover"
            @mouseout="itemMouseout">
@@ -27,10 +27,10 @@ export default {
   name: "HandCard",
   setup(props, {emit}) {
     let cardSrc = ref(g_secretCard[props.cardId].imgtag);
-    let test = require("@/assets/images/card/" + cardSrc.value + ".png");
+    let imgsrc = require("@/assets/images/card/" + cardSrc.value + ".png");
     let cardContent = ref(g_secretCard[props.cardId].content);
 
-    let basePos = 4;
+    let basePos = 5;
     const players = inject("players");
     const pos = inject("pos");
     const floatWindowContent = inject("floatWindowContent");
@@ -43,7 +43,7 @@ export default {
     }
 
     return {
-      test,
+      imgsrc,
       basePos,
       sendSelectIdxback,
       handCard,
@@ -79,7 +79,6 @@ export default {
       } else {
         focusTooltip.css("left", x + "vw");
       }
-
     },
   }
 };

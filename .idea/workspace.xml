@@ -4,69 +4,60 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="添加悬停展示悬浮窗效果">
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/丹书铁券红上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/丹书铁券蓝上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/丹书铁券黑上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/分庭抗礼红左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/分庭抗礼蓝右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/分庭抗礼黑右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/分庭抗礼黑左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/取予有节红右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/取予有节红左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/取予有节蓝右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/取予有节黑左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/察言观色红左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/察言观色蓝左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/察言观色黑左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/将计就计红右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/将计就计蓝左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/将计就计黑右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/峰回路转红右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/峰回路转蓝左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/扭转乾坤红上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/扭转乾坤红右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/扭转乾坤红左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/扭转乾坤蓝上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/扭转乾坤蓝右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/扭转乾坤黑上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/横刀夺爱红上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/横刀夺爱蓝上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/横刀夺爱黑上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/移花接木红上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/移花接木红右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/移花接木蓝上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/移花接木蓝右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/移花接木黑上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/移花接木黑右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/移花接木黑左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/舍生取义红右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/舍生取义红左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/舍生取义蓝左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/虎口夺食红左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/虎口夺食蓝左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/虎口夺食黑右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/虎口夺食黑左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/飞冤驾害黑右.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/飞冤驾害黑左.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/plugin/secretcard.js" afterDir="false" />
+    <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="添加卡牌具体图片和悬浮信息">
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/card/权皇.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/专诸.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/刘伯温.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/刘彻.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/刺客.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/勾践.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/包拯.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/吕不韦.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/商贾.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/商鞅.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/商鞅旧版.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/妲己.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/姬昌.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/嬴政.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/孙膑.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/宦官.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/将军.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/张良.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/慈禧.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/捕快.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/方士.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/朱棣.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/李世民.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/杨玉环.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/武则天.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/死士.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/王昭君.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/白起.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/神农.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/程婴.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/花魁.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/藏家.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/诸葛亮.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/谏臣.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/豫让.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/赵匡胤.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/韩信.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/项羽.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HuangQuan/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HuangQuan/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/consumers/multiplayer/cardlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/consumers/multiplayer/cardlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/consumers/multiplayer/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/consumers/multiplayer/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/urls/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/urls/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/urls/loginmenu/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/urls/loginmenu/index.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/assets/test.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/ActionLog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/ActionLog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/FloatWindow.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/GameGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/GameGround.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/GameRoom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/GameRoom.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/HandCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/HandCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/MyGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/MyGround.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/PlayerGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/PlayerGround.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/UsedCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/UsedCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/plugin/floatwindow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/plugin/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/plugin/http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/按钮功能梳理.md" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/按钮功能梳理.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/plugin/secretcard.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/plugin/secretcard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +125,7 @@
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/CodeFile/HuangQuan/web/src/assets",
+    "last_opened_file_path": "D:/CodeFile/HuangQuan/web/src/assets/images/character",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -147,18 +138,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CodeFile\HuangQuan\web\src\assets\images\character" />
+      <recent name="D:\CodeFile\HuangQuan\web\src\assets\images\behind" />
+      <recent name="D:\CodeFile\HuangQuan\web\src\assets\images\card" />
       <recent name="D:\CodeFile\HuangQuan\web\src\assets" />
       <recent name="D:\CodeFile\HuangQuan\web\src\assets\images" />
-      <recent name="D:\CodeFile\HuangQuan\web\src\assets\images\card" />
-      <recent name="D:\CodeFile\HuangQuan\web\src\components" />
-      <recent name="D:\CodeFile\HuangQuan\HuangQuan\HuangQuan\consumers\multiplayer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CodeFile\HuangQuan\web\src\assets\images\front" />
       <recent name="D:\CodeFile\HuangQuan\web\src\assets\images\card" />
       <recent name="D:\CodeFile\HuangQuan\web\src\assets" />
       <recent name="D:\CodeFile\HuangQuan\game\models\player" />
       <recent name="D:\CodeFile\HuangQuan" />
-      <recent name="D:\CodeFile\HuangQuan\web" />
     </key>
   </component>
   <component name="RunManager" selected="Django 服务器.django">
@@ -221,7 +212,7 @@
       <workItem from="1651402960313" duration="12493000" />
       <workItem from="1651457291104" duration="50767000" />
       <workItem from="1651548745353" duration="37223000" />
-      <workItem from="1651732663500" duration="11467000" />
+      <workItem from="1651732663500" duration="28280000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1651138175487</created>
@@ -314,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651728624555</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="添加卡牌具体图片和悬浮信息">
+      <created>1651757882035</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1651757882035</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +341,8 @@
     <MESSAGE value="添加出牌记录区域，添加角色选中功能，添加同步数据到各个角色区域功能" />
     <MESSAGE value="完成抽n张牌，出牌记录功能" />
     <MESSAGE value="添加悬停展示悬浮窗效果" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加悬停展示悬浮窗效果" />
+    <MESSAGE value="添加卡牌具体图片和悬浮信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加卡牌具体图片和悬浮信息" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

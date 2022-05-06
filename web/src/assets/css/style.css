@@ -1,13 +1,12 @@
 
 .play-ground {
-    background-color: lightblue;
-    width: 9vw;
-    height: 22vh;
+    width: 15vw;
+    height: 30vh;
 }
 
 .play-ground-if-select {
     width: 9vw;
-    height: 25vh;
+    height: 30vh;
     border-style: solid;
     border-color: green;
     border-width: thick;
@@ -27,127 +26,209 @@
 
 #play-ground-3 {
     position: absolute;
-    left: 45vw;
+    left: 44vw;
     top: 0.2vh;
 }
 
 #play-ground-4 {
     position: absolute;
-    left: 30vw;
+    left: 28vw;
     top: 0.2vh;
 }
 
 #play-ground-5 {
     position: absolute;
-    left: 15vw;
+    left: 12vw;
     top: 0.2vh;
 }
 
 #play-ground-6 {
     position: absolute;
-    top: 35vh;
+    top: 20vh;
     left: 0.5vw;
 }
 
 #play-ground-used-card {
     position: absolute;
-    top: 40vh;
-    left: 40vw;
+    top: 33vh;
+    left: 80vw;
     display: inline-block;
 }
 
-.play-ground-behind-character {
-    background-color: burlywood;
-    width: 4.5vw;
-    height: 15vh;
-    float: left;
-}
-
-.play-ground-front-character {
-    background-color: aliceblue;
-    width: 4.5vw;
-    height: 15vh;
+.play-ground-character {
+    width: 9vw;
+    height: 27vh;
     float: left;
 }
 
 .play-ground-information-blue {
-    background-color: deepskyblue;
-    width: 3vw;
-    height: 5vh;
-    float: left;
+    background-color: #333c71;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    font-size: 2vh;
+    width: 2vw;
+    height: 2vh;
+    position: relative;
+    top: -9vh;
+    left: 0.5vw;
+    border-style: inset;
+    border-radius: 1vh;
+    /*opacity: 80%;*/
 }
 
+
 .play-ground-information-red {
-    background-color: red;
-    width: 3vw;
-    height: 5vh;
-    float: left;
+    background-color: #862c28;
+    color: white;
+    display: inline-block;
+    font-size: 2vh;
+    text-align: center;
+    width: 2vw;
+    height: 2vh;
+    position: relative;
+    top: -9vh;
+    left: 1vw;
+    border-style: inset;
+    border-radius: 1vh;
+    /*opacity: 80%;*/
 }
 
 .play-ground-information-gray {
-    background-color: lightgray;
-    width: 3vw;
-    height: 5vh;
-    float: left;
+    background-color: #3d3b3b;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 2vh;
+    width: 2vw;
+    height: 2vh;
+    position: relative;
+    top: -9vh;
+    left: 1.5vw;
+    border-style: inset;
+    border-radius: 1vh;
+    /*opacity: 80%;*/
+}
+
+.play-ground-character-username {
+    text-align: center;
+    top: -26vh;
+    left: 1vw;
+    /*border-style: inset;*/
+}
+
+.play-ground-card-information {
+    background-color: lightcyan;
+    display: inline-block;
+    width: 7vw;
+    font-size: 2vh;
+    text-align: center;
+    position: relative;
+    top: -8.5vh;
+    left: 1vw;
+    border: 2px solid lightslategrey;
+    border-radius: 5px;
+}
+
+.play-ground-deliver-card {
+    position: relative;
+    top: 2vh;
+    width: 4vw;
+    height: 8vh;
 }
 
 .hand-card {
-    /*background-color: khaki;*/
-    /*border-style: solid;*/
+    position: absolute;
     width: 8vw;
     height: 20vh;
     float: left;
 }
 
 .my-ground-information-blue {
-    background-color: deepskyblue;
-    position: relative;
-    left: 0.3vw;
-    width: 6vw;
-    height: 5vh;
+    background-color: #333c71;
+    text-align: center;
+    font-size: 3vh;
+    position: absolute;
+    bottom: 12vh;
+    border-style: inset;
+    border-radius: 1vh;
+    left: 0.5vw;
+    width: 4vw;
+    height: 4vh;
 }
 
 .my-ground-information-red {
-    background-color: red;
-    position: relative;
-    left: 0.3vw;
-    width: 6vw;
-    height: 5vh;
+    background-color: #862c28;
+    position: absolute;
+    text-align: center;
+    font-size: 3vh;
+    bottom: 7vh;
+    left: 0.5vw;
+    width: 4vw;
+    height: 4vh;
+    border-style: inset;
+    border-radius: 1vh;
 }
 
 .my-ground-information-gray {
-    background-color: lightgray;
-    position: relative;
-    left: 0.3vw;
-    width: 6vw;
-    height: 5vh;
+    background-color: #3d3b3b;
+    text-align: center;
+    font-size: 3vh;
+    color: white;
+    position: absolute;
+    bottom: 2vh;
+    left: 0.5vw;
+    width: 4vw;
+    height: 4vh;
+    border-style: inset;
+    border-radius: 1vh;
 }
+
 
 .my-ground-behind-character {
     position: absolute;
-    left: 90vw;
+    left: 80vw;
     bottom: 1vh;
-    width: 4.5vw;
-    height: 15vh;
+    width: 9vw;
+    height: 27vh;
     float: left;
 }
 
 .my-ground-front-character {
     position: absolute;
     background-color: aliceblue;
-    left: 95vw;
+    left: 90vw;
     bottom: 1vh;
-    width: 4.5vw;
-    height: 15vh;
+    width: 9vw;
+    height: 27vh;
     float: left;
+}
+
+.my-ground-if-select {
+    position: absolute;
+    left: 79vw;
+    bottom: 0vh;
+    width: 20vw;
+    height: 28vh;
+    border-style: solid;
+    border-color: green;
+    border-width: thick;
+}
+
+.my-ground-deliver-card {
+    position: absolute;
+    width: 4vw;
+    height: 8vh;
+    left: 80vw;
+    bottom: 30vh;
 }
 
 .action-log {
     position: absolute;
     background-color: aliceblue;
-    width: 24vw;
+    width: 22vw;
     height: 30vh;
-    left: 75vw;
+    left: 77vw;
     top: 1vh;
 }
 
@@ -161,7 +242,7 @@
     transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1),
     top 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     background-color: rgba(50, 50, 50, 0.701961);
-    border-width: 0px;
+    border-width: 0;
     border-color: #333333;
     border-radius: 4px;
     color: #ffffff;
@@ -170,7 +251,17 @@
     font-weight: normal;
     font-stretch: normal;
     font-size: 1vmax;
-    font-family: "Microsoft YaHei";
     line-height: 21px;
     padding: 10px 10px;
+}
+
+button {
+    background: url("../images/按钮.png");
+    color: white;
+    background-size: 100% 100%;
+    border-style: none;
+    width: 6vw;
+    height: 4vh;
+    text-align: center;
+    font-size: 2vh;
 }

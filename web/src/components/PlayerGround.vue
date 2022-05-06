@@ -1,22 +1,24 @@
 <template>
-  <div @click="log" :class="selectUsername == username ? 'play-ground-if-select' : ''">
+  <div @click="selectUser" :class="selectUsername === username ? 'play-ground-if-select' : ''">
     <div class="play-ground">
-      <div>{{ username }}</div>
-      <div class="play-ground-behind-character">
-        <img src="https://img.win3000.com/m00/06/ac/9e46cfd309a8aa2c7ef0b16ed50296be_c_345_458.jpg"
+      <div class="play-ground-character">
+        <div class="play-ground-character-username">{{ username }}</div>
+        <img src="@/assets/images/character/张良.png"
              style="height: 100%;width: 100%">
+        <div class="play-ground-information-blue">
+          {{ blue.length }}
+        </div>
+        <div class="play-ground-information-red">
+          {{ red.length }}
+        </div>
+        <div class="play-ground-information-gray">
+          {{ gray.length }}
+        </div>
+        <div class="play-ground-card-information">手牌数:{{ hand_card.length }}</div>
       </div>
-      <div class="play-ground-front-character">
-      </div>
-      <div>手牌数:{{ hand_card.length }}</div>
-      <div class="play-ground-information-blue">
-        {{ blue.length }}
-      </div>
-      <div class="play-ground-information-red">
-        {{ red.length }}
-      </div>
-      <div class="play-ground-information-gray">
-        {{ gray.length }}
+      <div v-show="deliverCardOwner === username" class="play-ground-deliver-card">
+        <img src="@/assets/images/card/权皇.png"
+             style="height: 100%;width: 100%">
       </div>
     </div>
   </div>
@@ -32,17 +34,20 @@ export default {
     // 一种写法
     // const {loc} = toRefs(props);
     // console.log("loc", loc.value);
+    const deliverCardOwner = inject("deliverCardOwner");
+
     const players = inject("players");
     let myStatus = toRefs(players.arr[props.loc - 1]);
     const selectUsername = inject("selectUsername");
 
     return {
       ...myStatus,
-      selectUsername
+      selectUsername,
+      deliverCardOwner
     };
   },
   methods: {
-    log() {
+    selectUser() {
       if (this.selectUsername === this.username)
         this.selectUsername = "";
       else
