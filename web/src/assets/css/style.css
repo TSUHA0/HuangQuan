@@ -132,9 +132,9 @@
 
 .play-ground-deliver-card {
     position: relative;
-    top: 2vh;
-    width: 4vw;
-    height: 8vh;
+    top: 5vh;
+    width: 5vw;
+    height: 12vh;
 }
 
 .hand-card {
@@ -217,8 +217,8 @@
 
 .my-ground-deliver-card {
     position: absolute;
-    width: 4vw;
-    height: 8vh;
+    width: 5vw;
+    height: 12vh;
     left: 80vw;
     bottom: 30vh;
 }
@@ -226,9 +226,9 @@
 .action-log {
     position: absolute;
     background-color: aliceblue;
-    width: 22vw;
+    width: 27vw;
     height: 30vh;
-    left: 77vw;
+    left: 72vw;
     top: 1vh;
 }
 

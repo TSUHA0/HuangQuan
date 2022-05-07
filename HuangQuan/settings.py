@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-pe1al!q$bao6=-&%q))z2-sr^4510a@awpq%ei#3slzdt#z1@s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.163.151']
+ALLOWED_HOSTS = ['*', '192.168.163.151']
 
 # Application definition
 
@@ -126,6 +126,7 @@ CACHES = {
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         },
+        'TIMEOUT': 7200
     },
 }
 USER_AGENTS_CACHE = 'default'
@@ -181,5 +182,5 @@ CHANNEL_LAYERS = {
 }
 
 CARD_NUM = 100
-FRONT_ROLE_NUM = 40
+FRONT_ROLE_NUM = 10
 BEHIND_ROLE_NUM = 10

@@ -9,7 +9,7 @@
       (this.basePos + (this.idx) * (this.handCard.length > 8 ? (70 / this.handCard.length) : 8))
       + 'vw;' + this.bottom "
          @click="sendSelectIdxback">
-      <img :src="imgsrc" style="height: 100%;width: 100%"
+      <img :src="getImgUrl(cardId)" style="height: 100%;width: 100%"
            @mousemove="itemMousemove($event)"
            @mouseover="itemMouseover"
            @mouseout="itemMouseout">
@@ -26,8 +26,6 @@ import g_secretCard from "@/plugin/secretcard";
 export default {
   name: "HandCard",
   setup(props, {emit}) {
-    let cardSrc = ref(g_secretCard[props.cardId].imgtag);
-    let imgsrc = require("@/assets/images/card/" + cardSrc.value + ".png");
     let cardContent = ref(g_secretCard[props.cardId].content);
 
     let basePos = 5;
@@ -43,7 +41,6 @@ export default {
     }
 
     return {
-      imgsrc,
       basePos,
       sendSelectIdxback,
       handCard,
@@ -58,6 +55,10 @@ export default {
     bottom: String
   },
   methods: {
+    getImgUrl(id) {
+      let images = require.context("../assets/images/card/", false, /\.png$/);
+      return images("./" + g_secretCard[id].imgtag + ".png");
+    },
     itemMouseover: function () {
       var focusTooltip = $("#focus_toolTip");
       this.t = setTimeout(function () {

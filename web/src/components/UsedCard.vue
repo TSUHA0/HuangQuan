@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="hand-card">
-      <img :src="imgsrc" style="height: 100%;width: 100%"
+      <img :src="getImgUrl(cardUsedId)" style="height: 100%;width: 100%"
            @mousemove="itemMousemove"
            @mouseover="itemMouseover"
            @mouseout="itemMouseout">
@@ -26,16 +26,11 @@ export default {
     const cardUsedId = inject("cardUsedId");
     const cardUsedOwner = inject("cardUsedOwner");
     const floatWindowContent = inject("floatWindowContent");
-    let id = ref(0);
-    if (g_secretCard[cardUsedId.value].name === "察言观色") id.value = 0;
-    else id.value = cardUsedId.value;
-    let cardSrc = ref(g_secretCard[id.value].imgtag);
-    let imgsrc = require("@/assets/images/card/" + cardSrc.value + ".png");
+
     let cardContent = ref(g_secretCard[cardUsedId.value].content);
     let t = Function;
 
     return {
-      imgsrc,
       floatWindowContent,
       t,
       cardContent,
@@ -44,6 +39,10 @@ export default {
     };
   },
   methods: {
+    getImgUrl: function (id) {
+      let images = require.context("../assets/images/card/", false, /\.png$/);
+      return images("./" + g_secretCard[id].imgtag + ".png");
+    },
     itemMouseover: function () {
       var focusTooltip = $("#focus_toolTip_used_card");
       this.t = setTimeout(function () {

@@ -25,7 +25,7 @@ def shuffle_n(arr, n):
 
 
 def init_front_list():
-    return get_random_list(1, FRONT_ROLE_NUM, 20)
+    return get_random_list(1, FRONT_ROLE_NUM, FRONT_ROLE_NUM)
 
 
 def init_behind_list():

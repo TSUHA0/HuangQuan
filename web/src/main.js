@@ -4,6 +4,8 @@ import App from "./App.vue";
 import router from "@/router/router";
 import "./assets/css/style.css";
 import "@/plugin/secretcard";
+import "@/plugin/front";
+
 
 // 5. 创建并挂载根实例
 const app = createApp(App);
