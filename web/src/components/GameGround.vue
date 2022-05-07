@@ -10,7 +10,7 @@
     <button style="margin-top: 1vh" @click="drawCard(2)">抽 2 张牌</button>
     <PlayerGround id="play-ground-2" :loc="loc[1]"></PlayerGround>
     <PlayerGround id="play-ground-3" :loc="loc[2]"></PlayerGround>
-    <PlayerGround id="play-ground-4" :loc="loc[3]"></PlayerGround>
+    <PlayerGround v-show="playerNum>3" id="play-ground-4" :loc="loc[3]"></PlayerGround>
     <PlayerGround v-show="playerNum>4" id="play-ground-5" :loc="loc[4]"></PlayerGround>
     <PlayerGround v-show="playerNum>5" id="play-ground-6" :loc="loc[5]"></PlayerGround>
 
@@ -102,12 +102,12 @@ export default {
     });
 
     let receiveInfoIsShow = ref(false);
-
+    console.log("pos.value", pos.value);
     console.log("playerNum", playerNum.value);
     let loc = [];
-    for (let i = pos.value + 1, cnt = 0; cnt < 10; ++i, ++cnt) {
-      i = ((i - 1) % playerNum.value) + 1;
-      loc.push(i);
+    for (let i = pos.value, cnt = 0; cnt < 10; ++i, ++cnt) {
+      console.log("i", (i - 1) % playerNum.value + 1, "cnt", cnt);
+      loc.push((i - 1) % playerNum.value + 1);
     }
 
     provide("receiveInfoIsShow", receiveInfoIsShow);
@@ -281,7 +281,7 @@ export default {
           {
             "event": "send_deliver_card",
             "username": window.sessionStorage.getItem("username"),
-            "delivercardowner": this.selectUsername,
+            "target": this.selectUsername,
           }
       ));
     }

@@ -217,6 +217,11 @@ export default {
       }
     }
 
+    function send_deliver_card(data) {
+      updateActionLog("传递密函")
+      deliverStatus.deliverCardOwner = data.target;
+    }
+
 
     function wssOnMsg(e) {
       let data = JSON.parse(e.data);
@@ -234,6 +239,7 @@ export default {
       else if (event === "reverse_deliver") reverse_deliver(data);  //打出牌
       else if (event === "drop_receive") drop_receive(data);  //打出牌
       else if (event === "receive_to_hand") receive_to_hand(data);  //打出牌
+      else if (event === "send_deliver_card") send_deliver_card(data);  //打出牌
 
       // 以下为需要忽略username为自身的event
       if (data.username === username) return false;

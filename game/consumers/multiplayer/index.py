@@ -502,6 +502,16 @@ class MultiPlayer(AsyncWebsocketConsumer):
             }
         )
 
+    async def send_deliver_card(self, data):
+        await self.channel_layer.group_send(
+            self.room_id,
+            {
+                'type': "group_event_send",
+                "event": "send_deliver_card",
+                "target": data['target'],
+            }
+        )
+
     async def receive(self, text_data):
         data = json.loads(text_data)
         event = data['event']
@@ -541,3 +551,5 @@ class MultiPlayer(AsyncWebsocketConsumer):
             await self.receive_to_hand(data)
         elif event == "receive_to_receive":
             await self.receive_to_receive(data)
+        elif event == "send_deliver_card":
+            await self.send_deliver_card(data)

@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="完善布局，添加图片资源">
+    <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="添加四人">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/consumers/multiplayer/cardlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/consumers/multiplayer/cardlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/consumers/multiplayer/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/consumers/multiplayer/index.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/GameGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/GameGround.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/plugin/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/plugin/http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/GameRoom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/GameRoom.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/MyGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/MyGround.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/PlayerGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/PlayerGround.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +193,7 @@
       <workItem from="1651402960313" duration="12493000" />
       <workItem from="1651457291104" duration="50767000" />
       <workItem from="1651548745353" duration="37223000" />
-      <workItem from="1651732663500" duration="80149000" />
+      <workItem from="1651732663500" duration="83649000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1651138175487</created>
@@ -313,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651924631913</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="添加四人">
+      <created>1651932825374</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1651932825374</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +352,8 @@
     <MESSAGE value="添加悬停展示悬浮窗效果" />
     <MESSAGE value="添加卡牌具体图片和悬浮信息" />
     <MESSAGE value="完善布局，添加图片资源" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善布局，添加图片资源" />
+    <MESSAGE value="添加四人" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加四人" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
@@ -352,14 +361,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/web/src/components/GameRoom.vue</url>
-          <line>206</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

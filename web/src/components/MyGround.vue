@@ -68,7 +68,7 @@ export default {
     let myStatus = toRefs(players.arr[pos.value - 1]);
     const handCard = myStatus.hand_card;
     let behindReq = require("@/assets/images/character/behind/" + g_behind[myStatus.behind.value].imgtag + ".png");
-    let frontReq = require("@/assets/images/character/front/" + g_front[myStatus.behind.value].imgtag + ".png");
+    let frontReq = require("@/assets/images/character/front/" + g_front[myStatus.front.value].imgtag + ".png");
 
     const updateSelectCardId = inject("updateSelectCardId");
     const selectCardId = inject("selectCardId");

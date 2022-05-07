@@ -65,7 +65,7 @@ export default {
       if (myStatus.witch_status.value === "front") {
         return imagef("./" + g_front[myStatus.front.value].imgtag + ".png");
       } else {
-        return imageb("./" + g_behind[myStatus.front.value].imgtag + ".png");
+        return imageb("./" + g_behind[myStatus.behind.value].imgtag + ".png");
       }
     }
 
