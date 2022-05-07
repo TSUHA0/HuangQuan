@@ -18,7 +18,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    if (window.sessionStorage.getItem("username") || to.path === "/login") next();
+    if (window.sessionStorage.getItem("username") || to.path === "/login" || to.path === "/register") next();
     else {
         alert("请先登陆");
         next("/login");

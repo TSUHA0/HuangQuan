@@ -44,6 +44,9 @@ def init_role_list(n):
     elif n == 5:
         ret = [1, 1, 2, 2, 3]
         shuffle_n(ret, 5)
+    elif n == 4:
+        ret = [1, 1, 2, 2]
+        shuffle_n(ret, 4)
     elif n == 3:
         ret = [1, 2, 3]
     return ret

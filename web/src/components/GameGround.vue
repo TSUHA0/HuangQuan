@@ -11,7 +11,7 @@
     <PlayerGround id="play-ground-2" :loc="loc[1]"></PlayerGround>
     <PlayerGround id="play-ground-3" :loc="loc[2]"></PlayerGround>
     <PlayerGround id="play-ground-4" :loc="loc[3]"></PlayerGround>
-    <PlayerGround id="play-ground-5" :loc="loc[4]"></PlayerGround>
+    <PlayerGround v-show="playerNum>4" id="play-ground-5" :loc="loc[4]"></PlayerGround>
     <PlayerGround v-show="playerNum>5" id="play-ground-6" :loc="loc[5]"></PlayerGround>
 
     <UsedCard v-if="cardUsedId !== 0" id="play-ground-used-card"></UsedCard>

@@ -5,49 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a192805-03fb-4e68-90b3-872128be1790" name="变更" comment="完善布局，添加图片资源">
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/专诸.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/刘伯温.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/刘彻.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/勾践.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/包拯.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/吕不韦.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/商鞅.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/妲己.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/姬昌.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/嬴政.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/孙膑.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/张良.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/慈禧.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/朱棣.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/李世民.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/杨玉环.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/武则天.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/王昭君.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/白起.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/神农.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/程婴.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/诸葛亮.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/豫让.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/赵匡胤.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/韩信.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/behind/项羽.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/刺客.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/商贾.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/宦官.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/将军.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/捕快.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/方士.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/死士.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/细作.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/花魁.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/藏家.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/谏臣.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/character/front/风水师.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/images/按钮.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HuangQuan/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HuangQuan/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/consumers/multiplayer/cardlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/consumers/multiplayer/cardlist.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/GameGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/GameGround.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/plugin/behind.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/plugin/behind.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/plugin/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/plugin/http.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/router/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +104,7 @@
       <recent name="D:\CodeFile\HuangQuan\game\models\player" />
     </key>
   </component>
-  <component name="RunManager" selected="Django 服务器.django">
+  <component name="RunManager" selected="npm.npm">
     <configuration name="cardlist" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HuangQuan" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -230,7 +192,7 @@
       <workItem from="1651402960313" duration="12493000" />
       <workItem from="1651457291104" duration="50767000" />
       <workItem from="1651548745353" duration="37223000" />
-      <workItem from="1651732663500" duration="77396000" />
+      <workItem from="1651732663500" duration="80149000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1651138175487</created>
@@ -344,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651924167246</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="完善布局，添加图片资源">
+      <created>1651924631913</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1651924631913</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
